@@ -7,7 +7,7 @@ var audio = document.getElementById("audioElement");
 // p5.js setup() function to set up the canvas for the web cam video stream
 function setup() {
   //creating a canvas by giving the dimensions
-  const canvas = createCanvas(500, 500);
+  const canvas = createCanvas(600, 500);
   canvas.parent("video");
 
   videofeed = createCapture(VIDEO);
@@ -35,7 +35,7 @@ function draw() {
 
 // toggle button for starting the video feed
 function start() {
-  select("#startstop").html("stop");
+  select("#startstop").html("Stop");
   document.getElementById("startstop").addEventListener("click", stop);
   started = true;
   loop();
@@ -43,7 +43,7 @@ function start() {
 
 // toggle button for ending the video feed
 function stop() {
-  select("#startstop").html("start");
+  select("#startstop").html("Start");
   document.getElementById("startstop").addEventListener("click", start);
   removeblur();
   started = false;
